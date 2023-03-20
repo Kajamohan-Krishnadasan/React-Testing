@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+#multiple-select {
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #791010;
+  border-radius: 15px;
+}
+
+#multiple-select option {
+  padding: 5px 25px;
+  background-color: #edb9b9;
+  border-bottom: 1px solid red;
+  /* border-radius: 15px; */
+}
