@@ -775,3 +775,29 @@ test("render error", async () => {
 
 - this is tool helps to run scripts before commiting code
 - install husky plugin : **npx husky-init npm install**
+- add below line in **husky/pre-commit** folder
+  <!-- 
+  npm run lint && npm run format
+    --> this will run before commiting code
+
+## lint-staged
+
+- this is tool helps to run scripts on staged files
+- install lint-staged plugin : **npm install --dev lint-staged**
+- add below line in **package.json** file
+  <!-- scripts
+      "lint-staged": "lint-staged"
+    -->
+
+  then add below line
+  <!-- lint-staged
+      {
+        "*.{ts,tsx}": ["eslint "],
+        "*.{ts,tsx,css,scss}": ["prettier  --write"]
+      }
+    -->
+
+- add below line in **husky/pre-commit** folder
+  <!--
+      npx lint-staged
+    -->
