@@ -1,8 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import Application from "./Application";
 
-describe.skip("Appliction", () => {
-  test("render correctly", () => {
+// console.log(name); // ESlint error: 'name' is not defined
+// const name = "Kajamohan";
+
+describe("Appliction", () => {
+  test("render correctly", async () => {
     render(<Application />);
 
     /**
@@ -11,6 +14,8 @@ describe.skip("Appliction", () => {
      */
 
     /* check by name and level */
+
+    // const pageHeading = await screen.getByRole("heading", { // ESlint error: await is not required
     const pageHeading = screen.getByRole("heading", {
       name: "Job application form",
       level: 1,
@@ -43,6 +48,10 @@ describe.skip("Appliction", () => {
 
     const submitButtonElement = screen.getByRole("button");
     expect(submitButtonElement).toBeInTheDocument();
+
+    // eslint
+    // expect(submitButtonElement).not.toBeEnabled();
+    expect(submitButtonElement).toBeDisabled(); // button is disabled
 
     /**
      * getByLabelText

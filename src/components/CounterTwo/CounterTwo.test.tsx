@@ -26,13 +26,11 @@ describe("Counter Two", () => {
 
     const incrementButton = screen.getByRole("button", { name: "Increment" });
     const decrementButton = screen.getByRole("button", { name: "Decrement" });
-    
+
     await user.click(incrementButton);
     await user.click(decrementButton);
-    
+
     expect(incrementHandler).toHaveBeenCalledTimes(1);
     expect(decrementHandler).toHaveBeenCalledTimes(1);
-
-    
   });
 });

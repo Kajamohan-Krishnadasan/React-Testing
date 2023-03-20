@@ -119,8 +119,14 @@ describe.skip("User-Events Counter keyboard interactions", () => {
     );
 
     await user.selectOptions(screen.getByRole("listbox"), ["1", "C"]); //  here we selecting options A,C
-    expect((screen.getByRole("option", { name: "A" } ) as HTMLOptionElement).selected ).toBe(true);
-    expect((screen.getByRole("option", { name: "B" } ) as HTMLOptionElement).selected ).toBe(false);
-    expect((screen.getByRole("option", { name: "C" } ) as HTMLOptionElement).selected ).toBe(true);
-   });
+    expect(
+      (screen.getByRole("option", { name: "A" }) as HTMLOptionElement).selected
+    ).toBe(true);
+    expect(
+      (screen.getByRole("option", { name: "B" }) as HTMLOptionElement).selected
+    ).toBe(false);
+    expect(
+      (screen.getByRole("option", { name: "C" }) as HTMLOptionElement).selected
+    ).toBe(true);
+  });
 });

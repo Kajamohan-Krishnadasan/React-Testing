@@ -10,6 +10,6 @@ const MuiMode = () => {
       <Typography component="h1"> {`${theme.palette.mode} mode`} </Typography>
     </div>
   );
-}; 
+};
 
 export default MuiMode;

@@ -25,7 +25,7 @@ const Counter = () => {
 
       <button onClick={() => setCount(amount)}> Set </button>
 
-      <select id="multiple-select" multiple size={2} >
+      <select id="multiple-select" multiple size={2}>
         <option value="1">A</option>
         <option value="2">B</option>
         <option value="3">C</option>

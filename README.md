@@ -730,3 +730,48 @@ test("render error", async () => {
   5. lint-staged
 
 ## ESlint
+
+- this is tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
+
+- install eslint plugin : **npm install --dev eslint-plugin-jest-dom**
+
+- **expect(submitButtonElement).not.toBeEnabled();**  
+  instead of above line we can use below line
+  **expect(submitButtonElement).toBeDisabled();**
+
+- add below line in **package.json** file
+  <!-- scripts
+  "lint": "eslint --ignore-path .gitignore ."
+    -->
+  then run **npm run lint**
+
+## Prettier
+
+- this is tool for code formatting
+- install prettier plugin : **npm install --dev --exact prettier**
+- add below line in **package.json** file
+  <!-- scripts
+      "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,json,css,scss}\""
+    -->
+
+  then run **npm run format** : we can format entaire project with this command
+
+- configure own formating code
+
+  - create file **.prettierrc.json** in /src folder
+  - in side add below lines
+    {
+    "semi" : false, // this will remove all semicolon from all code files
+    "singeQuote" : true, // this will interchage all double quote to single quote
+    }
+
+- **npm install --dev eslint-config-prettier** // this will remove all prettier rules from eslint
+- after install above package add below line
+  <!-- extends
+      "eslint-config-prettier"
+  -->
+
+## Husky
+
+- this is tool helps to run scripts before commiting code
+- install husky plugin : **npx husky-init npm install**

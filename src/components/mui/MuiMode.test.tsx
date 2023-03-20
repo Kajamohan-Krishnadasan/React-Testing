@@ -13,7 +13,6 @@ describe.skip("MUI mode", () => {
     //   wrapper: AppProviders,
     // });
 
-
     const headingElement = screen.getByRole("heading");
     /**
      * test fail if the render method

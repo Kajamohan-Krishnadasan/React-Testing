@@ -6,7 +6,6 @@ const UseCounter = ({ initialCount = 0 }: useCounterProps = {}) => {
   const increment = () => setCount(count + 1);
   const decrement = () => setCount(count - 1);
 
-
   return { count, increment, decrement };
 };
 

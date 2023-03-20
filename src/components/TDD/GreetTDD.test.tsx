@@ -3,7 +3,7 @@ import { GreetTDD } from "./GreetTDD";
 
 describe("TDD Greet:", () => {
   test.skip("TDD Greet Render Correctly", () => {
-    render(<GreetTDD />)
+    render(<GreetTDD />);
     const textElement = screen.getByText("Hello");
     expect(textElement).toBeInTheDocument();
   });
